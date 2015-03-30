@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../Magento/Config/etc/system_file.xsd">
+    <system>
+        <tab id="maxyek" sortOrder="1">
+            <label>Maxyek</label>
+        </tab>
+
+        <section id="maxyek_general"  showInDefault="1">
+            <tab>maxyek</tab>
+            <label>General</label>
+            <resource>Magento_Config::config</resource>
+            <group id="personal"  showInDefault="1">
+                <label>Personal Settings</label>
+                <field id="name" type="text" showInDefault="1">
+                    <label>Owner name</label>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
