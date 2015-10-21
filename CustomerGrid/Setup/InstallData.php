@@ -56,10 +56,15 @@ class InstallData implements InstallDataInterface
                 'is_used_in_grid' => true,
                 'is_visible_in_grid' => true,
                 'is_filterable_in_grid' => true,
-                'is_searchable_in_grid' => true,
-                'used_in_forms', ['adminhtml_customer']
+                'is_searchable_in_grid' => true
             ]
         );
+
+        // add attribute to form
+        /** @var  $attribute */
+        $attribute = $customerSetup->getEavConfig()->getAttribute('customer', 'client_idn');
+        $attribute->setData('used_in_forms', ['adminhtml_customer']);
+        $attribute->save();
 
         $setup->endSetup();
     }
